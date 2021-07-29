@@ -9,7 +9,6 @@
     }
   ],
   "type": "quicksilver-script",
-  "version": "1.0.0",
   "require": {
     "composer/installers": "~1.0"
   },

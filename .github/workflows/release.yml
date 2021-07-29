@@ -1,11 +1,7 @@
 name: Deploy and Release
 on:
   push:
-    branches:
-      - release/**
-      - main
-    tags:
-      - 1.*
+    tags: ["v[0-9]+.[0-9]+.[0-9]+*"]
 
 jobs:
   deploy-package:
