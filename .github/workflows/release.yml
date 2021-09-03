@@ -18,19 +18,24 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
 
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+          cache: "npm"
+
       - name: Install composer dependencies
         run: |
           composer --no-interaction --no-progress --prefer-dist install
 
-      - name: Publish to Packagist
-        run: |
-          php .github/scripts/release.php
-
       - name: Create Changelog
         id: changelog
-        uses: heinrichreimer/github-changelog-generator-action@v2.1.1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          npm install -g auto-changelog
+          auto-changelog
+
+      - name: Autocommit changelog
+        uses: stefanzweifel/git-auto-commit-action@v4
 
       - name: Create Release
         id: create_release
@@ -40,7 +45,6 @@ jobs:
         with:
           tag_name: ${{ github.ref }}
           release_name: Release ${{ github.ref }}
-          body: |
-            ${{ steps.changelog.outputs.changelog }}
+          body_path: "CHANGELOG.md"
           draft: false
           prerelease: false
