@@ -1,0 +1,13 @@
+{
+  "name": "pantheon-quicksilver/wakeup",
+  "description": "A simple script to wake up a sleeping site environment.",
+  "homepage": "https://github.com/pantheon-quicksilver/wakeup",
+  "authors": [
+    {
+      "name": "Kyle Taylor",
+      "email": "kyle.taylor@pantheon.io"
+    }
+  ],
+  "type": "quicksilver-script",
+  "license": "MIT"
+}
