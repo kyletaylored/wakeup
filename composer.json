@@ -9,5 +9,8 @@
     }
   ],
   "type": "quicksilver-script",
-  "license": "MIT"
+  "license": "MIT",
+  "require": {
+    "composer/installers": "^1 || ^2"
+  }
 }
