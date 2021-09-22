@@ -12,5 +12,13 @@
   "license": "MIT",
   "require": {
     "composer/installers": "^1 || ^2"
+  },
+  "require-dev": {
+    "marcocesarato/php-conventional-changelog": "^1"
+  },
+  "scripts": {
+    "changelog": "conventional-changelog",
+    "changelog:full": "conventional-changelog --history",
+    "changelog:release": "conventional-changelog --amend"
   }
 }
