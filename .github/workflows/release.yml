@@ -16,7 +16,7 @@ jobs:
 
       - name: Install composer dependencies
         run: |
-          composer --no-interaction --no-progress --prefer-dist --dev install
+          composer --no-interaction --no-progress --prefer-dist install
 
       - name: Create changelog
         id: changelog
