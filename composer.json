@@ -12,5 +12,19 @@
   "license": "MIT",
   "require": {
     "composer/installers": "^1 || ^2"
+  },
+  "extra": {
+    "quicksilver-workflow": [
+      {
+        "wf_type": "sync_code",
+        "stage": "before",
+        "priority": true
+      },
+      {
+        "wf_type": "deploy",
+        "stage": "before",
+        "priority": true
+      }
+    ]
   }
 }
