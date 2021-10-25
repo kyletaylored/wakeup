@@ -15,17 +15,19 @@
     "pantheon-quicksilver/pantheon-yml-editor": "dev-main"
   },
   "extra": {
-    "quicksilver-workflow": [
-      {
-        "wf_type": "sync_code",
-        "stage": "before",
-        "priority": true
-      },
-      {
-        "wf_type": "deploy",
-        "stage": "before",
-        "priority": true
-      }
-    ]
+    "pantheon-quicksilver": {
+      "wakeup": [
+        {
+          "wf_type": "clone_database",
+          "stage": "after",
+          "weight": 1
+        },
+        {
+          "wf_type": "create_cloud_development_environment",
+          "stage": "after",
+          "weight": 100
+        }
+      ]
+    }
   }
 }
