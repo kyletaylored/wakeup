@@ -18,14 +18,14 @@
     "pantheon-quicksilver": {
       "wakeup": [
         {
-          "wf_type": "clone_database",
-          "stage": "after",
-          "weight": 1
-        },
-        {
           "wf_type": "create_cloud_development_environment",
           "stage": "after",
           "weight": 100
+        },
+        {
+          "wf_type": "clone_database",
+          "stage": "after",
+          "weight": 1
         }
       ]
     }
