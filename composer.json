@@ -12,7 +12,7 @@
   "license": "MIT",
   "require": {
     "composer/installers": "^1 || ^2",
-    "pantheon-quicksilver/pantheon-yml-editor": "dev-main"
+    "pantheon-quicksilver/pantheon-yml-editor": "dev-bw-alchemy"
   },
   "extra": {
     "pantheon-quicksilver": {
