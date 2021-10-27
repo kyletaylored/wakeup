@@ -11,6 +11,23 @@
   "type": "quicksilver-script",
   "license": "MIT",
   "require": {
-    "composer/installers": "^1 || ^2"
+    "composer/installers": "^1 || ^2",
+    "pantheon-quicksilver/pantheon-yml-editor": "dev-main"
+  },
+  "extra": {
+    "pantheon-quicksilver": {
+      "wakeup": [
+        {
+          "wf_type": "clone_database",
+          "stage": "after",
+          "weight": 1
+        },
+        {
+          "wf_type": "create_cloud_development_environment",
+          "stage": "after",
+          "weight": 100
+        }
+      ]
+    }
   }
 }
