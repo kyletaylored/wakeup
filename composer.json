@@ -11,8 +11,7 @@
   "type": "quicksilver-script",
   "license": "MIT",
   "require": {
-    "composer/installers": "^1 || ^2",
-    "pantheon-quicksilver/pantheon-yml-editor": "dev-main"
+    "composer/installers": "^1 || ^2"
   },
   "extra": {
     "pantheon-quicksilver": {
