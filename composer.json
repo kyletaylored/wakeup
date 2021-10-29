@@ -1,7 +1,8 @@
 {
   "name": "pantheon-quicksilver/wakeup",
-  "description": "A simple script to wake up a sleeping site environment.",
+  "description": "A simple script to wake up a site.",
   "homepage": "https://github.com/pantheon-quicksilver/wakeup",
+  "license": "MIT",
   "authors": [
     {
       "name": "Kyle Taylor",
@@ -9,22 +10,23 @@
     }
   ],
   "type": "quicksilver-script",
-  "license": "MIT",
-  "require": {
-    "composer/installers": "^1 || ^2"
-  },
   "extra": {
     "pantheon-quicksilver": {
       "wakeup": [
         {
-          "wf_type": "clone_database",
+          "wf_type": "deploy",
           "stage": "after",
           "weight": 1
         },
         {
-          "wf_type": "create_cloud_development_environment",
+          "wf_type": "sync_code",
           "stage": "after",
-          "weight": 100
+          "weight": 1
+        },
+        {
+          "wf_type": "clone_database",
+          "stage": "after",
+          "weight": 1
         }
       ]
     }
